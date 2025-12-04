@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easy park</title>
+    <link rel="stylesheet" href="com.css">
+    <script src="https://kit.fontawesome.com/761110c0cd.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="project.html"><img src="logo.png" alt="logo" class="logo"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="his1.html">HISTORY</a></li>
+                    <li><a href="com.html">COMPLAINTS</a></li> 
+                    <li id="LOGOUT"><a href="/security.html">LOGOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <form onsubmit="return greet()">
+                <h1>COMPLAINTS FORM</h1>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="mobile" placeholder="Mobile" required onclick="greet()">
+                <h4>Type Your Message Here...</h4>
+                <textarea required></textarea>
+                <button type="submit" id="button" style="color: green;">Submit</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        function greet() {
+            alert("Form Submiited successfully");
+            window.location.href='/agent/home.html';
+            return false;
+        }
+    </script>
+    </body>
+</html>
+  
