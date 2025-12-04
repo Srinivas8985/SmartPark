@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>easy park</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="" onsubmit="return validateLogin()">
+      <h1>Agent Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" required id="username">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required id="password">
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <a href="/indexmain.html">Main Menu</a>
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+  <script>
+  let loginDetails = {
+    12308069: 123456,
+    12308218: 123456,
+    12306325: 123456
+  };
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  function validateLogin(username, password) {
+    if(loginDetails[username] == password) { 
+      alert("Login Successful");
+      window.location.href="/agent/home.html";
+      return false;
+    } else {
+      alert("Login Failed");
+      return false;
+    }
+  }
+  </script>
+</body>
+</html>

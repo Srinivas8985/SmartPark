@@ -17,30 +17,22 @@
                     <li><a href="home.html">HOME</a></li>
                     <li><a href="his1.html">HISTORY</a></li>
                     <li><a href="com.html">COMPLAINTS</a></li> 
-                    <li id="LOGOUT"><a href="/security.html">LOGOUT</a></li>
+                    <li id="LOGOUT"><a href="#">LOGOUT</a></li>
                 </ul>
             </div>
         </nav>
         <div class="container">
-            <form onsubmit="return greet()">
+            <form>
                 <h1>COMPLAINTS FORM</h1>
                 <input type="text" id="firstName" placeholder="First Name" required>
                 <input type="text" id="lastName" placeholder="Last Name" required>
                 <input type="email" id="email" placeholder="Email" required>
-                <input type="text" id="mobile" placeholder="Mobile" required onclick="greet()">
+                <input type="text" id="mobile" placeholder="Mobile" required>
                 <h4>Type Your Message Here...</h4>
                 <textarea required></textarea>
-                <button type="submit" id="button" style="color: green;">Submit</button>
+                <input type="submit" value="Send" id="button" style="background-color: rgb(95,182,95); color: aliceblue;">
             </form>
         </div>
+       
     </section>
-    <script>
-        function greet() {
-            alert("Form Submiited successfully");
-            window.location.href='/agent/home.html';
-            return false;
-        }
-    </script>
-    </body>
-</html>
   

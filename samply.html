@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking Slot Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="parking-slot">
+    <h2>Parking Slot Booking</h2>
+    <form action="#">
+      <label for="slot">Select Slot:</label>
+      <select id="slot" name="slot" required>
+        <option value="" >Select</option>
+        <!-- Options will be dynamically generated -->
+      </select>
+      <button type="button" onclick="bookSlot()">Book Slot</button>
+    </form>
+  </div>
+  <script>
+    const total_slots = {
+  "slot1": true,
+  "slot2": false,
+  "slot3": true,
+  "slot4": false,
+  "slot5": true,
+  "slot6": false,
+  "slot7": true,
+  "slot8": false, 
+  "slot9": true, 
+  "slot10": false, 
+  "slot11": true, 
+  "slot12": false, 
+  "slot13": true, 
+  "slot14": false,
+  "slot15": true,
+  "slot16": false,
+  "slot17": true,
+  "slot18": false,
+  "slot19": true,
+  "slot20": false
+};
+
+function populateSlots() {
+  const select = document.getElementById('slot');
+  for (const slot in total_slots) {
+    const option = document.createElement('option');
+    option.value = slot;
+    option.textContent = slot.toUpperCase();
+    if (!total_slots[slot]) {
+      option.disabled = true;
+    }
+    select.appendChild(option);
+  }
+}
+
+function bookSlot() {
+  const slot = document.getElementById('slot').value;
+  if (slot) {
+    // Here you can add further logic for booking the selected slot
+    alert(`Slot ${slot.toUpperCase()} has been booked.`);
+  } else {
+    alert('Please select a slot.');
+  }
+}
+
+window.onload = function() {
+  populateSlots();
+};
+
+  </script>
+</body>
+</html>
