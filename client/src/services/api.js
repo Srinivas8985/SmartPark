@@ -14,8 +14,14 @@ seedDatabase();
 const USE_BACKEND = !!import.meta.env.VITE_API_URL;
 
 // ── Real Axios Instance (backend mode) ───────────────────
+// Automatically fix the Vercel VITE_API_URL so the user doesn't have to manually update their Vercel settings
+let baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+if (baseURL === 'https://smartpark-91ct.onrender.com' || baseURL === 'https://smartpark-91ct.onrender.com/') {
+    baseURL = 'https://smartpark-91ct.onrender.com/api';
+}
+
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: baseURL,
   headers: { 'Content-Type': 'application/json' },
 });
 
