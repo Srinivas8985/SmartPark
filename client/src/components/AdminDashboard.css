@@ -1,0 +1,5 @@
+/* AdminDashboard.css */
+.admin-table th { font-weight: 600; font-size: 0.75rem; }
+.hover-bg:hover { background-color: var(--bg-color); }
+.border-info { border-color: var(--info); }
+.border-accent { border-color: var(--accent); }

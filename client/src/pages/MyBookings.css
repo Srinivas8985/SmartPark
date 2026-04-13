@@ -1,0 +1,82 @@
+/* MyBookings.css */
+.my-bookings-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.max-w-4xl { max-width: 56rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  color: var(--text-main);
+  background: var(--bg-color);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.count-badge {
+  margin-left: 0.5rem;
+  opacity: 0.8;
+  font-size: 0.75rem;
+}
+
+.booking-status-bar {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-pending { background: var(--warning-bg); color: var(--warning); }
+.status-pending .dot { background: var(--warning); }
+
+.status-confirmed { background: var(--info-bg); color: var(--info); }
+.status-confirmed .dot { background: var(--info); }
+
+.status-completed { background: var(--success-bg); color: var(--success); }
+.status-completed .dot { background: var(--success); }
+
+.status-cancelled { background: var(--danger-bg); color: var(--danger); }
+.status-cancelled .dot { background: var(--danger); }
+
+.status-rejected { background: var(--bg-color); color: var(--text-muted); }
+.status-rejected .dot { background: var(--text-muted); }
+
+.btn-danger-outline {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--danger);
+  background: var(--danger-bg);
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.btn-danger-outline:hover {
+  background: rgba(239, 68, 68, 0.3);
+}

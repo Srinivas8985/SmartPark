@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>ParkSmart – Smart Parking Slot System</title>
+  <meta name="description" content="Find, book, and pay for parking in seconds. Smart pricing, real-time availability, slot locking, and instant invoice generation." />
+  <meta name="keywords" content="smart parking, parking booking, parking slot, ParkSmart, Bengaluru parking" />
+  <meta name="author" content="ParkSmart Inc." />
+
+  <!-- PWA (Feature #9) -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ParkSmart" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ParkSmart – Smart Parking Slot System" />
+  <meta property="og:description" content="Find, book, and pay for parking in seconds." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (P emoji fallback) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅿️</text></svg>" />
+
+  <!-- Font Awesome for icons (free CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Register Service Worker (PWA) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('[SW] Registered:', reg.scope))
+          .catch(err => console.warn('[SW] Registration failed:', err));
+      });
+    }
+  </script>
+</body>
+
+</html>

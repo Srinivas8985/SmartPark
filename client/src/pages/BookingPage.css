@@ -1,0 +1,30 @@
+/* BookingPage.css */
+.booking-page {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.hover-primary:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.bg-surface { background: var(--surface-color); }
+.bg-bg { background: var(--bg-color); }
+.border-color { border-color: var(--border-color); border: 1px solid var(--border-color); }
+
+.duration-grid .btn-sm {
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+}
+
+.duration-grid .bg-surface:hover {
+  background: var(--bg-color);
+}
+
+.my-3 { margin-top: 0.75rem; margin-bottom: 0.75rem; }

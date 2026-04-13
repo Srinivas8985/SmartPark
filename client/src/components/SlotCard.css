@@ -1,0 +1,18 @@
+/* SlotCard.css */
+.slot-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slot-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.slot-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}

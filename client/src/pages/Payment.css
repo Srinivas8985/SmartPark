@@ -1,0 +1,55 @@
+/* Payment.css */
+.payment-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-card {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+  .payment-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.payment-summary {
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.summary-item .label {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.summary-item .value {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.border-color-light {
+  border-color: rgba(255, 255, 255, 0.2);
+}
