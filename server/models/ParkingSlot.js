@@ -22,6 +22,19 @@ const ParkingSlotSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    totalSpots: {
+        type: Number,
+        default: 1
+    },
+    availableSpots: {
+        type: Number,
+        default: 1
+    },
+    amenities: [
+        {
+            type: String
+        }
+    ],
     images: [
         {
             type: String,

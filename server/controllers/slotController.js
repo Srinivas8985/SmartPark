@@ -5,7 +5,7 @@ const ParkingSlot = require('../models/ParkingSlot');
 // @access  Private (Owner only)
 exports.createSlot = async (req, res) => {
     try {
-        const { name, description, address, pricePerHour, availability, coordinates } = req.body;
+        const { name, description, address, pricePerHour, startTime, endTime, coordinates, totalSpots, amenities } = req.body;
 
         const owner = req.user.id;
 
@@ -21,7 +21,13 @@ exports.createSlot = async (req, res) => {
             description,
             address,
             pricePerHour,
-            availability,
+            totalSpots: totalSpots || 1,
+            availableSpots: totalSpots || 1,
+            amenities: amenities || [],
+            availability: {
+                startTime: startTime || '00:00',
+                endTime: endTime || '23:59'
+            },
             location
         });
 
