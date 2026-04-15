@@ -12,7 +12,7 @@ const ParkingSlotSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true,
+        default: ''
     },
     address: {
         type: String,
